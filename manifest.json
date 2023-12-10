@@ -2,7 +2,7 @@
     "name": "to do",
     "short_name": "App",
     "description": "Descrizione dell'app",
-    "start_url": "/",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#FFF7D4",
     "theme_color": "#FFF7D4",
