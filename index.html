@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftTask</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+            console.log('Service Worker registrato con successo:', registration);
+            })
+            .catch(function(error) {
+            console.error('Errore durante la registrazione del Service Worker:', error);
+            });
+        }
+    </script>
+    <div class="topBar">
+        <ul>
+            <li><h3>SwiftTask</h3></li>
+            <li style="float: right;"><a href="" style="text-decoration: none;"><dir class="add"><h3>+</h3></dir></a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="Giorni">
+        <div class="Giorno"><h3>Lunedì</h3></div>
+        <div class="Giorno"><h3>Martedì</h3></div>
+        <div class="Giorno"><h3>Mercoledì</h3></div>
+        <div class="Giorno"><h3>Giovedì</h3></div>
+        <div class="Giorno"><h3>Venerdì</h3></div>
+        <div class="Giorno"><h3>Sabato</h3></div>
+        <div class="Giorno"><h3>Domenica</h3></div>
+    </div>
+    <br>
+    
+    <div class="Scroll">
+        <div class="todo">
+            <table style="width: 100%;">
+                <tr>
+                    <td><h1>🕰️</h1></td>
+                    <td><center><h3>Lodi - Ufficio</h3></center></td>
+                    <td><button></button></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="todo" style="background-color: #8ACDD7;">
+            <table style="width: 100%;">
+                <tr>
+                    <td><h1>🍳</h1></td>
+                    <td><center><h3>Colazione</h3></center></td>
+                    <td><button></button></td>
+                </tr>
+            </table>
+        </div><br>
+        <div class="todo" style="background-color: #FFC0D9;">
+            <table style="width: 100%;">
+                <tr>
+                    <td><h1>🧹</h1></td>
+                    <td><center><h3>Pulire Stanza</h3></center></td>
+                    <td><button></button></td>
+                </tr>
+            </table>
+        </div><br>
+        <div class="todo" style="background-color: #BEADFA;">
+            <table style="width: 100%;">
+                <tr>
+                    <td><h1>🕰️</h1></td>
+                    <td><center><h3>Ora Sesta</h3></center></td>
+                    <td><button></button></td>
+                </tr>
+            </table>
+        </div><br>
+        <div class="todo" style="background-color: #FF8080;">
+            <table style="width: 100%;">
+                <tr>
+                    <td><h1>😴</h1></td>
+                    <td><center><h3>Riposo</h3></center></td>
+                    <td><button></button></td>
+                </tr>
+            </table>
+        </div><br>
+        <div class="todo" style="background-color: #8ACDD7;">
+            <table style="width: 100%;">
+                <tr>
+                    <td><h1>📖</h1></td>
+                    <td><center><h3>Leggere</h3></center></td>
+                    <td><button></button></td>
+                </tr>
+            </table>
+            
+        </div><br><div class="todo" style="background-color: #FFC0D9;">
+            <table style="width: 100%;">
+                <tr>
+                    <td><h1>🕰️</h1></td>
+                    <td><center><h3>Vespri</h3></center></td>
+                    <td><button></button></td>
+                </tr>
+            </table>
+        </div><br><div class="todo" style="background-color: #BEADFA;">
+            <table style="width: 100%;">
+                <tr>
+                    <td><h1>🍕</h1></td>
+                    <td><center><h3>Preparare Cena</h3></center></td>
+                    <td><button></button></td>
+                </tr>
+            </table>
+        </div><br><div class="todo" style="background-color: #FF8080;">
+            <h3>ciao</h3>
+        </div><br><div class="todo" style="background-color: #BEADFA;">
+            <h3>ciao</h3>
+        </div><br><div class="todo" style="background-color: #BEADFA;">
+            <h3>ciao</h3>
+        </div><br><br><br>
+    </div>
+    
+
+
+   
+</body>
+</html>
