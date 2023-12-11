@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,113 +8,160 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
     <script>
         if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then(function(registration) {
-            console.log('Service Worker registrato con successo:', registration);
-            })
-            .catch(function(error) {
-            console.error('Errore durante la registrazione del Service Worker:', error);
-            });
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function (registration) {
+                    console.log('Service Worker registrato con successo:', registration);
+                })
+                .catch(function (error) {
+                    console.error('Errore durante la registrazione del Service Worker:', error);
+                });
         }
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <div class="topBar">
         <ul>
-            <li><h3>SwiftTask</h3></li>
-            <li style="float: right;"><a href="" style="text-decoration: none;"><dir class="add"><h3>+</h3></dir></a></li>
+            <li>
+                <h3>SwiftTask</h3>
+            </li>
+            <li style="float: right;"><button style="background-color: #FFF7D4; border: none;" id="btn" href=""
+                    style="text-decoration: none;">
+                    <dir class="add">
+                        <h3>+</h3>
+                    </dir>
+                </button></li>
         </ul>
     </div>
     <br>
     <div class="Giorni">
-        <div class="Giorno"><h3>Lunedì</h3></div>
-        <div class="Giorno"><h3>Martedì</h3></div>
-        <div class="Giorno"><h3>Mercoledì</h3></div>
-        <div class="Giorno"><h3>Giovedì</h3></div>
-        <div class="Giorno"><h3>Venerdì</h3></div>
-        <div class="Giorno"><h3>Sabato</h3></div>
-        <div class="Giorno"><h3>Domenica</h3></div>
+        <div class="Giorno">
+            <h3>Lunedì</h3>
+        </div>
+        <div class="Giorno">
+            <h3>Martedì</h3>
+        </div>
+        <div class="Giorno">
+            <h3>Mercoledì</h3>
+        </div>
+        <div class="Giorno">
+            <h3>Giovedì</h3>
+        </div>
+        <div class="Giorno">
+            <h3>Venerdì</h3>
+        </div>
+        <div class="Giorno">
+            <h3>Sabato</h3>
+        </div>
+        <div class="Giorno">
+            <h3>Domenica</h3>
+        </div>
     </div>
     <br>
-    
-    <div class="Scroll">
-        <div class="todo">
-            <table style="width: 100%;">
-                <tr>
-                    <td><h1>🕰️</h1></td>
-                    <td><center><h3>Lodi - Ufficio</h3></center></td>
-                    <td><button></button></td>
-                </tr>
-            </table>
-        </div>
+
+    <div class="Card">
         <br>
-        <div class="todo" style="background-color: #8ACDD7;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><h1>🍳</h1></td>
-                    <td><center><h3>Colazione</h3></center></td>
-                    <td><button></button></td>
-                </tr>
-            </table>
-        </div><br>
-        <div class="todo" style="background-color: #FFC0D9;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><h1>🧹</h1></td>
-                    <td><center><h3>Pulire Stanza</h3></center></td>
-                    <td><button></button></td>
-                </tr>
-            </table>
-        </div><br>
-        <div class="todo" style="background-color: #BEADFA;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><h1>🕰️</h1></td>
-                    <td><center><h3>Ora Sesta</h3></center></td>
-                    <td><button></button></td>
-                </tr>
-            </table>
-        </div><br>
-        <div class="todo" style="background-color: #FF8080;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><h1>😴</h1></td>
-                    <td><center><h3>Riposo</h3></center></td>
-                    <td><button></button></td>
-                </tr>
-            </table>
-        </div><br>
-        <div class="todo" style="background-color: #8ACDD7;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><h1>📖</h1></td>
-                    <td><center><h3>Leggere</h3></center></td>
-                    <td><button></button></td>
-                </tr>
-            </table>
-            
-        </div><br><div class="todo" style="background-color: #FFC0D9;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><h1>🕰️</h1></td>
-                    <td><center><h3>Vespri</h3></center></td>
-                    <td><button></button></td>
-                </tr>
-            </table>
-        </div><br><div class="todo" style="background-color: #BEADFA;">
-            <table style="width: 100%;">
-                <tr>
-                    <td><h1>🍕</h1></td>
-                    <td><center><h3>Preparare Cena</h3></center></td>
-                    <td><button></button></td>
-                </tr>
-            </table>
-        <br><br><br>
-    </div>
-    
+        <br>
+        <div id="Modal" class="modal">
+            <div class="modal-content" style="background: #FFCF96;">
+                <button class="close close" style="background: #FFCF96;">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                </button>
+
+                <br><br>
+                <h3>Titolo:</h3>
+                <br><br>
+                <center>
+                    <input type="text" id="todoInput"
+                        style="width: 100%; height: 40px; border-radius: 15px; border: 0; padding-left: 5px;"><br><br>
+                    <button onclick="addTodo()"
+                        style=" font-size: medium; height: 40px; width: 100px; background-color: #EB99D9; border-radius: 30px; border: 2px solid #000">Salva</button>
+                    <br>
+                </center>
+            </div>
+        </div>
+
+        <script>
+            var modal = document.getElementById("Modal");
+            var btn = document.getElementById("btn");
+            var button_close = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            button_close.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <ul id="todoList"></ul>
+
+        <script>
+            function addTodo() {
+                var todoInput = document.getElementById('todoInput');
+                var task = todoInput.value.trim();
+
+                if (task !== '') {
+                    var todos = JSON.parse(localStorage.getItem('todos')) || [];
+                    todos.push(task);
+                    localStorage.setItem('todos', JSON.stringify(todos));
+                    updateTodoList();
+                    todoInput.value = '';
+                }
+            }
+
+            function removeTodo(index) {
+                var todos = JSON.parse(localStorage.getItem('todos')) || [];
+                todos.splice(index, 1);
+                localStorage.setItem('todos', JSON.stringify(todos));
+                updateTodoList();
+            }
+
+            function updateTodoList() {
+                var todoList = document.getElementById('todoList');
+                todoList.innerHTML = '';
+
+                var todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+                todos.forEach(function (task, index) {
+                    var li = document.createElement('li');
+                    li.className = 'todoItem';
+                    li.innerHTML = `
+                <div class="todo">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td><h1>🕰️</h1></td>
+                            <td><center><h3>${task}</h3></center></td>
+                            <td><button class="deleteButton" onclick="removeTodo(${index})"></button></td>
+                        </tr>
+                    </table>
+                </div>
+            `;
+                    todoList.appendChild(li);
+                });
+            }
+
+            window.onload = updateTodoList;
+
+            window.addEventListener('beforeunload', function () {
+                var todos = JSON.parse(localStorage.getItem('todos')) || [];
+                localStorage.setItem('todos', JSON.stringify(todos));
+            });
+        </script>
 
 
-   
+
+
 </body>
+
 </html>
